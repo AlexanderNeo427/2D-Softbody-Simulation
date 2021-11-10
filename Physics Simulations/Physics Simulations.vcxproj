@@ -154,11 +154,19 @@
     <ClCompile Include="src\Simulations\Cloth Simulation\ClothSimulation.cpp" />
     <ClCompile Include="src\Application.cpp" />
     <ClCompile Include="src\Main.cpp" />
+    <ClCompile Include="src\Simulations\Softbodies\SoftbodySimulation.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Simulations\Physics.h" />
+    <ClInclude Include="src\Simulations\Softbodies\DataClasses.h" />
+    <ClInclude Include="src\Simulations\Softbodies\PointMass.h" />
     <ClInclude Include="src\Simulations\Cloth Simulation\ClothSimulation.h" />
     <ClInclude Include="src\Application.h" />
     <ClInclude Include="src\Simulations\SimulationBase.h" />
+    <ClInclude Include="src\Simulations\Softbodies\SoftBody.h" />
+    <ClInclude Include="src\Simulations\Softbodies\SoftbodyBuilder.h" />
+    <ClInclude Include="src\Simulations\Softbodies\SoftbodySimulation.h" />
+    <ClInclude Include="src\Simulations\Softbodies\Spring.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

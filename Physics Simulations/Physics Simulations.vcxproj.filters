@@ -24,6 +24,9 @@
     <ClCompile Include="src\Simulations\Cloth Simulation\ClothSimulation.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\Simulations\Softbodies\SoftbodySimulation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Simulations\SimulationBase.h">
@@ -33,6 +36,27 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\Simulations\Cloth Simulation\ClothSimulation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Simulations\Softbodies\SoftbodySimulation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Simulations\Softbodies\Spring.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Simulations\Softbodies\PointMass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Simulations\Softbodies\SoftBody.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Simulations\Softbodies\SoftbodyBuilder.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Simulations\Softbodies\DataClasses.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Simulations\Physics.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
