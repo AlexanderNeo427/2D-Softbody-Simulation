@@ -3,7 +3,9 @@
 Application::Application()
 	:
 	m_simulation(nullptr)
-{}
+{
+	sAppName = "Physics Simulations";
+}
 
 Application::~Application()
 {
@@ -16,8 +18,7 @@ Application::~Application()
 
 bool Application::OnUserCreate()
 {
-	// Change the current simulation here
-	m_simulation = new ClothSimulation(this);
+	m_simulation = new SBS::SoftbodySimulation(this);
 	m_simulation->Init();
 	return true;
 }

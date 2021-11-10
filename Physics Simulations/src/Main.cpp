@@ -6,7 +6,7 @@ int main()
 {
 	Application* app = new Application();
 
-	if (app->Construct(800, 600, 1, 1))
+	if (app->Construct(1250, 900, 1, 1))
 		app->Start();
 
 	delete app;

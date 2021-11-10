@@ -2,7 +2,7 @@
 #define APPLICATION_H
 
 // All scenes here
-#include "Simulations/Cloth Simulation/ClothSimulation.h"
+#include "Simulations/Softbodies/SoftbodySimulation.h"
 
 class Application : public olc::PixelGameEngine
 {

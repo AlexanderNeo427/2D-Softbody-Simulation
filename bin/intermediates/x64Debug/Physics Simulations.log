@@ -1,35 +1,36 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(498,5): warning MSB8004: Intermediate Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Intermediate Directory.
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(499,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
   SoftbodySimulation.cpp
-D:\Projects\C++\Physics Simulations\Physics Simulations\src\Simulations\Softbodies\SoftBody.h(48,39): warning C4244: 'argument': conversion from 'T' to 'int32_t', possible loss of data
+D:\Projects\C++\Physics Simulations\Physics Simulations\src\Simulations\Softbodies\SoftBody.h(63,39): warning C4244: 'argument': conversion from 'T' to 'int32_t', possible loss of data
           with
           [
               T=float
           ]
-D:\Projects\C++\Physics Simulations\Physics Simulations\src\Simulations\Softbodies\SoftBody.h(48,33): warning C4244: 'argument': conversion from 'T' to 'int32_t', possible loss of data
+D:\Projects\C++\Physics Simulations\Physics Simulations\src\Simulations\Softbodies\SoftBody.h(63,33): warning C4244: 'argument': conversion from 'T' to 'int32_t', possible loss of data
           with
           [
               T=float
           ]
-D:\Projects\C++\Physics Simulations\Physics Simulations\src\Simulations\Softbodies\SoftBody.h(48,27): warning C4244: 'argument': conversion from 'T' to 'int32_t', possible loss of data
+D:\Projects\C++\Physics Simulations\Physics Simulations\src\Simulations\Softbodies\SoftBody.h(63,27): warning C4244: 'argument': conversion from 'T' to 'int32_t', possible loss of data
           with
           [
               T=float
           ]
-D:\Projects\C++\Physics Simulations\Physics Simulations\src\Simulations\Softbodies\SoftBody.h(48,21): warning C4244: 'argument': conversion from 'T' to 'int32_t', possible loss of data
+D:\Projects\C++\Physics Simulations\Physics Simulations\src\Simulations\Softbodies\SoftBody.h(63,21): warning C4244: 'argument': conversion from 'T' to 'int32_t', possible loss of data
           with
           [
               T=float
           ]
-D:\Projects\C++\Physics Simulations\Physics Simulations\src\Simulations\Softbodies\SoftBody.h(52,54): warning C4244: 'argument': conversion from 'float' to 'int32_t', possible loss of data
-D:\Projects\C++\Physics Simulations\Physics Simulations\src\Simulations\Softbodies\SoftBody.h(52,45): warning C4244: 'argument': conversion from 'T' to 'int32_t', possible loss of data
+D:\Projects\C++\Physics Simulations\Physics Simulations\src\Simulations\Softbodies\SoftBody.h(67,54): warning C4244: 'argument': conversion from 'float' to 'int32_t', possible loss of data
+D:\Projects\C++\Physics Simulations\Physics Simulations\src\Simulations\Softbodies\SoftBody.h(67,45): warning C4244: 'argument': conversion from 'T' to 'int32_t', possible loss of data
           with
           [
               T=float
           ]
-D:\Projects\C++\Physics Simulations\Physics Simulations\src\Simulations\Softbodies\SoftBody.h(52,31): warning C4244: 'argument': conversion from 'T' to 'int32_t', possible loss of data
+D:\Projects\C++\Physics Simulations\Physics Simulations\src\Simulations\Softbodies\SoftBody.h(67,31): warning C4244: 'argument': conversion from 'T' to 'int32_t', possible loss of data
           with
           [
               T=float
           ]
+D:\Projects\C++\Physics Simulations\Physics Simulations\src\Simulations\Softbodies\SoftbodySimulation.cpp(45,40): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
   Physics Simulations.vcxproj -> D:\Projects\C++\Physics Simulations\bin\x64Debug\Physics Simulations.exe

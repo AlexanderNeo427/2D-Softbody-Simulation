@@ -157,7 +157,6 @@
     <ClCompile Include="src\Simulations\Softbodies\SoftbodySimulation.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Simulations\Physics.h" />
     <ClInclude Include="src\Simulations\Softbodies\DataClasses.h" />
     <ClInclude Include="src\Simulations\Softbodies\PointMass.h" />
     <ClInclude Include="src\Simulations\Cloth Simulation\ClothSimulation.h" />

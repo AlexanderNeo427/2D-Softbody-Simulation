@@ -5,32 +5,54 @@ namespace SBS
 {
 	struct WorldData
 	{
-		WorldData(const glm::vec2& worldMin, const glm::vec2& worldMax)
-			:
-			m_worldMin(worldMin),
-			m_worldMax(worldMax)
-		{};
-	private:
-		glm::vec2 m_worldMin;
-		glm::vec2 m_worldMax;
+		glm::vec2 boundsX;
+		glm::vec2 boundsY;
 	};
 
-	struct PointMassParams
+	struct PhysicsData
 	{
-		glm::vec2  pos;
+		glm::vec2 gravity;
+		float	  coefFriction;
+		float	  coefRestitution;
+	};
+
+	struct PointMassData
+	{
 		float	   radius;
 		float	   mass;
 		olc::Pixel color;
 	};
 
-	class UpdateData
+	struct SpringData
 	{
-	public:
-		UpdateData(olc::PixelGameEngine* pge) : m_pge(pge) {};
+		float stiffness;
+		float dampFactor;
+	};
 
+	struct UpdateData
+	{
+		PhysicsData&   physicsData;
+		PointMassData& pointmassData;
+		SpringData&	   springData;
+	};
 
-	private:
-		olc::PixelGameEngine* m_pge;
+	struct FloatSlider
+	{
+		float			 *value;
+		const float		  min;
+		const float		  max;
+		const std::string name;
+
+		FloatSlider(float*			   _value, 
+					const float		   _min,
+					const float		   _max,
+					const std::string& _name) 
+			:
+			value(_value),
+			min(_min),
+			max(_max),
+			name(_name)
+		{};
 	};
 }
 

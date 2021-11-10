@@ -36,6 +36,22 @@ namespace SBS
 
 				}
 			}
+
+			// Accumulate spring forces
+			for (Spring* const spring : m_springs)
+			{
+				// TODO
+				// glm::vec2 springForce = spring->CalcSpringLinearForceP21();
+				// spring->p1->force -= springForce;
+				// spring->p2->force += springForce;
+			}
+
+			// Integrate momentum
+			for (PointMass* const pMass: m_pointMasses)
+			{
+				pMass->vel += (pMass->force / pMass->mass) * deltaTime;
+				pMass->pos += pMass->vel * deltaTime;
+			}
 		}
 
 		void Render(olc::PixelGameEngine* pge) const
@@ -44,7 +60,6 @@ namespace SBS
 			{
 				glm::vec2 p1(spring->p1->pos);
 				glm::vec2 p2(spring->p2->pos);
-
 				pge->DrawLine(p1.x, p1.y, p2.x, p2.y, olc::WHITE);
 			}
 			for (PointMass* const pMass : m_pointMasses)

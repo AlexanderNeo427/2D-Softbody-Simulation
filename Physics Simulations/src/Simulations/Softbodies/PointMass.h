@@ -26,17 +26,6 @@ namespace SBS
 			radius(_radius),
 			color(_color)
 		{}
-
-		void AddForce(const glm::vec2& _force)
-		{
-			force += _force;
-		}
-
-		void Integrate(float deltaTime)
-		{
-			vel += (force / mass) * deltaTime;
-			pos += vel * deltaTime;
-		}
 	};
 }
 

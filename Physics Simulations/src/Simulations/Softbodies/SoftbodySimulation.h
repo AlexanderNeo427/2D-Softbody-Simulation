@@ -28,17 +28,19 @@ namespace SBS
 		const float BORDER_FRICTION	   = 0.75f;
 	public:
 		SoftbodySimulation(olc::PixelGameEngine* pge);
-		~SoftbodySimulation();
 
 		void Init();
 		void Update(float deltaTime);
 		void Render();
 		void Exit();
 	private:
-		std::vector<SoftBody*> m_softBodies;
+		SoftBody* m_softBody;
 
 		UpdateData* m_updateData;
 		WorldData*  m_worldData;
+
+		std::vector<FloatSlider*> m_floatSliders;
+		int m_index;
 	};
 }
 
