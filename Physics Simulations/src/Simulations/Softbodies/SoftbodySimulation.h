@@ -12,7 +12,7 @@ namespace SBS
 		// Point-masses
 		static const int NUM_POINTS_X	= 12;
 		static const int NUM_POINTS_Y	= 9;
-		const float		 POINTMASS_SIZE = 6.f;
+		const float		 POINTMASS_SIZE = 9.f;
 		const float		 POINTMASS_MASS = 1.f;
 
 		// Springs
@@ -34,13 +34,11 @@ namespace SBS
 		void Render();
 		void Exit();
 	private:
-		SoftBody* m_softBody;
-
-		UpdateData* m_updateData;
-		WorldData*  m_worldData;
-
-		std::vector<FloatSlider*> m_floatSliders;
-		int m_index;
+		void InitializeWorldData();
+		void UpdateWorldData();
+	private:
+		SoftBody*  m_softBody;
+		WorldData* m_worldData;
 	};
 }
 

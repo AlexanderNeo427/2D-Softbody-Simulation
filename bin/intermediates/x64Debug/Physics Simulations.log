@@ -1,3 +1,36 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(437,5): warning MSB8004: Intermediate Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Intermediate Directory.
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(438,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
+  SoftBody.cpp
+C:\Users\180538A\Documents\C++\Physics-Simulations\Physics Simulations\src\Simulations\Softbodies\SoftBody.cpp(57,37): warning C4244:  'argument': conversion from 'T' to 'int32_t', possible loss of data
+C:\Users\180538A\Documents\C++\Physics-Simulations\Physics Simulations\src\Simulations\Softbodies\SoftBody.cpp(57,37): warning C4244:         with
+C:\Users\180538A\Documents\C++\Physics-Simulations\Physics Simulations\src\Simulations\Softbodies\SoftBody.cpp(57,37): warning C4244:         [
+C:\Users\180538A\Documents\C++\Physics-Simulations\Physics Simulations\src\Simulations\Softbodies\SoftBody.cpp(57,37): warning C4244:             T=float
+C:\Users\180538A\Documents\C++\Physics-Simulations\Physics Simulations\src\Simulations\Softbodies\SoftBody.cpp(57,37): warning C4244:         ]
+C:\Users\180538A\Documents\C++\Physics-Simulations\Physics Simulations\src\Simulations\Softbodies\SoftBody.cpp(57,31): warning C4244:  'argument': conversion from 'T' to 'int32_t', possible loss of data
+C:\Users\180538A\Documents\C++\Physics-Simulations\Physics Simulations\src\Simulations\Softbodies\SoftBody.cpp(57,31): warning C4244:         with
+C:\Users\180538A\Documents\C++\Physics-Simulations\Physics Simulations\src\Simulations\Softbodies\SoftBody.cpp(57,31): warning C4244:         [
+C:\Users\180538A\Documents\C++\Physics-Simulations\Physics Simulations\src\Simulations\Softbodies\SoftBody.cpp(57,31): warning C4244:             T=float
+C:\Users\180538A\Documents\C++\Physics-Simulations\Physics Simulations\src\Simulations\Softbodies\SoftBody.cpp(57,31): warning C4244:         ]
+C:\Users\180538A\Documents\C++\Physics-Simulations\Physics Simulations\src\Simulations\Softbodies\SoftBody.cpp(57,25): warning C4244:  'argument': conversion from 'T' to 'int32_t', possible loss of data
+C:\Users\180538A\Documents\C++\Physics-Simulations\Physics Simulations\src\Simulations\Softbodies\SoftBody.cpp(57,25): warning C4244:         with
+C:\Users\180538A\Documents\C++\Physics-Simulations\Physics Simulations\src\Simulations\Softbodies\SoftBody.cpp(57,25): warning C4244:         [
+C:\Users\180538A\Documents\C++\Physics-Simulations\Physics Simulations\src\Simulations\Softbodies\SoftBody.cpp(57,25): warning C4244:             T=float
+C:\Users\180538A\Documents\C++\Physics-Simulations\Physics Simulations\src\Simulations\Softbodies\SoftBody.cpp(57,25): warning C4244:         ]
+C:\Users\180538A\Documents\C++\Physics-Simulations\Physics Simulations\src\Simulations\Softbodies\SoftBody.cpp(57,19): warning C4244:  'argument': conversion from 'T' to 'int32_t', possible loss of data
+C:\Users\180538A\Documents\C++\Physics-Simulations\Physics Simulations\src\Simulations\Softbodies\SoftBody.cpp(57,19): warning C4244:         with
+C:\Users\180538A\Documents\C++\Physics-Simulations\Physics Simulations\src\Simulations\Softbodies\SoftBody.cpp(57,19): warning C4244:         [
+C:\Users\180538A\Documents\C++\Physics-Simulations\Physics Simulations\src\Simulations\Softbodies\SoftBody.cpp(57,19): warning C4244:             T=float
+C:\Users\180538A\Documents\C++\Physics-Simulations\Physics Simulations\src\Simulations\Softbodies\SoftBody.cpp(57,19): warning C4244:         ]
+C:\Users\180538A\Documents\C++\Physics-Simulations\Physics Simulations\src\Simulations\Softbodies\SoftBody.cpp(61,52): warning C4244:  'argument': conversion from 'float' to 'int32_t', possible loss of data
+C:\Users\180538A\Documents\C++\Physics-Simulations\Physics Simulations\src\Simulations\Softbodies\SoftBody.cpp(61,43): warning C4244:  'argument': conversion from 'T' to 'int32_t', possible loss of data
+C:\Users\180538A\Documents\C++\Physics-Simulations\Physics Simulations\src\Simulations\Softbodies\SoftBody.cpp(61,43): warning C4244:         with
+C:\Users\180538A\Documents\C++\Physics-Simulations\Physics Simulations\src\Simulations\Softbodies\SoftBody.cpp(61,43): warning C4244:         [
+C:\Users\180538A\Documents\C++\Physics-Simulations\Physics Simulations\src\Simulations\Softbodies\SoftBody.cpp(61,43): warning C4244:             T=float
+C:\Users\180538A\Documents\C++\Physics-Simulations\Physics Simulations\src\Simulations\Softbodies\SoftBody.cpp(61,43): warning C4244:         ]
+C:\Users\180538A\Documents\C++\Physics-Simulations\Physics Simulations\src\Simulations\Softbodies\SoftBody.cpp(61,29): warning C4244:  'argument': conversion from 'T' to 'int32_t', possible loss of data
+C:\Users\180538A\Documents\C++\Physics-Simulations\Physics Simulations\src\Simulations\Softbodies\SoftBody.cpp(61,29): warning C4244:         with
+C:\Users\180538A\Documents\C++\Physics-Simulations\Physics Simulations\src\Simulations\Softbodies\SoftBody.cpp(61,29): warning C4244:         [
+C:\Users\180538A\Documents\C++\Physics-Simulations\Physics Simulations\src\Simulations\Softbodies\SoftBody.cpp(61,29): warning C4244:             T=float
+C:\Users\180538A\Documents\C++\Physics-Simulations\Physics Simulations\src\Simulations\Softbodies\SoftBody.cpp(61,29): warning C4244:         ]
+C:\Users\180538A\Documents\C++\Physics-Simulations\Physics Simulations\src\Simulations\Softbodies\Spring.h(26): warning C4172:  returning address of local variable or temporary
   Physics Simulations.vcxproj -> C:\Users\180538A\Documents\C++\Physics-Simulations\bin\x64Debug\Physics Simulations.exe

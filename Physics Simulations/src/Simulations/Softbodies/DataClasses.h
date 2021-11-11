@@ -5,8 +5,8 @@ namespace SBS
 {
 	struct BoundaryData
 	{
-		glm::vec2 boundsX;
-		glm::vec2 boundsY;
+		glm::vec2 min;
+		glm::vec2 max;
 	};
 
 	struct PhysicsData
@@ -16,25 +16,24 @@ namespace SBS
 		float	  coefRestitution;
 	};
 
-	struct PointMassData
-	{
-		float	   radius;
-		float	   mass;
-		olc::Pixel color;
-	};
-
 	struct SpringData
 	{
 		float stiffness;
 		float dampFactor;
 	};
 
+	struct PointMassData
+	{
+		float radius;
+		float mass;
+	};
+
 	struct WorldData
 	{
-		BoundaryData&  boundaryData;
-		PhysicsData&   physicsData;
-		PointMassData& pointmassData;
-		SpringData&	   springData;
+		BoundaryData  boundaryData;
+		PhysicsData   physicsData;
+		PointMassData pointmassData;
+		SpringData	  springData;
 	};
 }
 

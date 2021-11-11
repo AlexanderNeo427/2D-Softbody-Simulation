@@ -153,6 +153,7 @@
   <ItemGroup>
     <ClCompile Include="src\Application.cpp" />
     <ClCompile Include="src\Main.cpp" />
+    <ClCompile Include="src\Simulations\Softbodies\SoftBody.cpp" />
     <ClCompile Include="src\Simulations\Softbodies\SoftbodySimulation.cpp" />
   </ItemGroup>
   <ItemGroup>

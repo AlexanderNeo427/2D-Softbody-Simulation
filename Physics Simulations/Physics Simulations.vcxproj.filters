@@ -24,6 +24,9 @@
     <ClCompile Include="src\Simulations\Softbodies\SoftbodySimulation.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\Simulations\Softbodies\SoftBody.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Simulations\SimulationBase.h">
