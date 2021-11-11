@@ -21,9 +21,6 @@
     <ClCompile Include="src\Application.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\Simulations\Cloth Simulation\ClothSimulation.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\Simulations\Softbodies\SoftbodySimulation.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -33,9 +30,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\Application.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Simulations\Cloth Simulation\ClothSimulation.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\Simulations\Softbodies\SoftbodySimulation.h">

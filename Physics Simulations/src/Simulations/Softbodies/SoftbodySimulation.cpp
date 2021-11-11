@@ -18,14 +18,6 @@ void SBS::SoftbodySimulation::Init()
 					  (m_screenWidth / REST_LENGTH_RATIO) : 
 					  (m_screenHeight / REST_LENGTH_RATIO);
 
-	float testFloat = 234.f;
-
-	m_floatSliders =
-	{
-		new FloatSlider(&testFloat, 0.1f, 99.f, "firstEntry"),
-		new FloatSlider(&testFloat, 0.1f, 99.f, "secondEntry"),
-		new FloatSlider(&testFloat, 0.1f, 99.f, "thirdEntry"),
-	};
 }
 
 void SBS::SoftbodySimulation::Update(float deltaTime)

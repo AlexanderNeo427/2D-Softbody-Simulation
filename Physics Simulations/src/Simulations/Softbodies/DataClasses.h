@@ -3,7 +3,7 @@
 
 namespace SBS
 {
-	struct WorldData
+	struct BoundaryData
 	{
 		glm::vec2 boundsX;
 		glm::vec2 boundsY;
@@ -29,30 +29,12 @@ namespace SBS
 		float dampFactor;
 	};
 
-	struct UpdateData
+	struct WorldData
 	{
+		BoundaryData&  boundaryData;
 		PhysicsData&   physicsData;
 		PointMassData& pointmassData;
 		SpringData&	   springData;
-	};
-
-	struct FloatSlider
-	{
-		float			 *value;
-		const float		  min;
-		const float		  max;
-		const std::string name;
-
-		FloatSlider(float*			   _value, 
-					const float		   _min,
-					const float		   _max,
-					const std::string& _name) 
-			:
-			value(_value),
-			min(_min),
-			max(_max),
-			name(_name)
-		{};
 	};
 }
 
