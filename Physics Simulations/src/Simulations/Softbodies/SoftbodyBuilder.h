@@ -3,6 +3,7 @@
 
 #include "SoftBody.h"
 #include "DataClasses.h"
+#include "glm/gtc/constants.hpp"
 
 namespace SBS
 {
@@ -20,7 +21,7 @@ namespace SBS
 							   const float			restLength)
 		{
 			std::vector<PointMass*> pointMasses;
-			std::vector<Spring*>	springs;
+			std::vector<Spring*> springs;
 
 			// Initialize point-masses
 			glm::vec2 pos = position;
@@ -101,12 +102,43 @@ namespace SBS
 
 		SoftBody* GenerateSphere(const glm::vec2&	  position, 
 								 const PointMassData& pointmassData,
-								 const WorldData&	  worldData,
+								 const SpringData&	  springData,
 								 const int			  numPoints, 
 								 const float		  restLength)
 		{
+			std::vector<PointMass*> pointMasses;
+			std::vector<Spring*> springs;
 
-			return nullptr;
+			// Initialize point-masses
+			for (int i = 0; i < numPoints; ++i)
+			{
+				float normalizedRad = ((float)i / (float)numPoints) * glm::two_pi<float>();
+				float px = std::cos(normalizedRad) * restLength;
+				float py = std::sin(normalizedRad) * restLength;
+
+				glm::vec2 pos(position.x + px, position.y + py);
+				float radius = pointmassData.radius;
+				float mass = pointmassData.mass;
+
+				PointMass* pMass = new PointMass(pos, mass, radius, olc::RED);
+				pointMasses.emplace_back(pMass);
+			}
+
+			// Initialize springs
+			for (int i = 0; i < pointMasses.size() - 1; ++i)
+			{
+				for (int j = i + 1; j < pointMasses.size(); ++j)
+				{
+					if (i == j) continue;
+
+					PointMass* p1 = pointMasses[i];
+					PointMass* p2 = pointMasses[j];
+					Spring *spring = new Spring(p1, p2, glm::distance(p1->pos, p2->pos));
+					springs.emplace_back(spring);
+				}
+			}
+
+			return new SoftBody(pointMasses, springs);
 		}
 	private:
 		WorldData* m_worldData;

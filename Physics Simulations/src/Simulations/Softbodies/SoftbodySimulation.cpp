@@ -11,7 +11,7 @@ void SBS::SoftbodySimulation::Init()
 	InitializeWorldData();
 
 	float startX = m_screenWidth * 0.4f;
-	float startY = m_screenHeight * 0.2f;
+	float startY = m_screenHeight * 0.25f;
 	glm::vec2 pos(startX, startY);
 
 	float restLength = m_screenWidth < m_screenHeight ?
@@ -19,10 +19,15 @@ void SBS::SoftbodySimulation::Init()
 					  (m_screenHeight / REST_LENGTH_RATIO);
 
 	SoftbodyBuilder softbodyBuilder(m_worldData);
-	glm::ivec2 numPoints(7, 11);
-	m_softBody = softbodyBuilder.GenerateCube(pos, m_worldData->pointmassData,
-											  m_worldData->springData, 
-											  glm::ivec2(7, 11), restLength);
+
+	// Generate cube softbody
+	// m_softBody = softbodyBuilder.GenerateCube(pos, m_worldData->pointmassData,
+	// 										  m_worldData->springData, 
+	// 										  glm::ivec2(7, 11), restLength);
+
+	// Generate sphere softbody
+	 m_softBody = softbodyBuilder.GenerateSphere(pos, m_worldData->pointmassData, 
+	 											m_worldData->springData, NUM_POINTS, RADIUS);
 }
 
 void SBS::SoftbodySimulation::Update(float deltaTime)
@@ -84,17 +89,17 @@ void SBS::SoftbodySimulation::InitializeWorldData()
 	boundaryData.max = glm::vec2(m_screenWidth, m_screenHeight);
 
 	PhysicsData physicsData;
-	physicsData.gravity			= glm::vec2(0.f, 120.f);
-	physicsData.coefFriction	= 0.2f;
-	physicsData.coefRestitution = 0.69f;
+	physicsData.gravity			= glm::vec2(0.f, GRAVITY);
+	physicsData.coefFriction	= COEF_FRICTION;
+	physicsData.coefRestitution = COEF_RESTITUTION;
 
 	SpringData springData;
-	springData.stiffness  = 690.f;
-	springData.dampFactor = 0.69f;
+	springData.stiffness  = STIFFNESS;
+	springData.dampFactor = DAMP_FACTOR;
 
 	PointMassData pointmassData;
-	pointmassData.mass	 = 1.f;
-	pointmassData.radius = 6.f;
+	pointmassData.mass	 = POINTMASS_MASS;
+	pointmassData.radius = POINTMASS_SIZE;
 
 	m_worldData = new WorldData();
 	m_worldData->boundaryData  = boundaryData;

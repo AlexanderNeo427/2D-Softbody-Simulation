@@ -2,12 +2,19 @@
 
 void SBS::SoftBody::Update(float deltaTime, WorldData* worldData)
 {
+	// Accumulate spring forces
+	for (Spring* const spring : m_springs)
+	{
+		float stiffness = worldData->springData.stiffness;
+		float dampFactor = worldData->springData.dampFactor;
+		glm::vec2 springForce = spring->CalcSpringLinearForceP21(stiffness, dampFactor);
+		spring->p1->force -= springForce;
+		spring->p2->force += springForce;
+	}
+
 	for (int i = 0; i < m_pointMasses.size(); ++i)
 	{
 		PointMass* pMass = m_pointMasses[i];
-
-		// Reset forces
-		pMass->force = glm::vec2(0.f, 0.f);
 
 		// Accumulate forces
 		glm::vec2 mg = worldData->pointmassData.mass * worldData->physicsData.gravity;
@@ -25,26 +32,16 @@ void SBS::SoftBody::Update(float deltaTime, WorldData* worldData)
 				ResolveCollision(pMass, pMass2, worldData->physicsData);
 			}
 		}
-	}
 
-	// Accumulate spring forces
-	for (Spring* const spring : m_springs)
-	{
-		float stiffness = worldData->springData.stiffness;
-		float dampFactor = worldData->springData.dampFactor;
-		glm::vec2 springForce = spring->CalcSpringLinearForceP21(stiffness, dampFactor);
-		spring->p1->force -= springForce;
-		spring->p2->force += springForce;
-	}
-
-	// Integrate momentum
-	for (PointMass* const pMass: m_pointMasses)
-	{
+		// Integrate
 		pMass->vel += (pMass->force / pMass->mass) * deltaTime;
 		pMass->pos += pMass->vel * deltaTime;
 
 		// Constrain to the screen/world boundaries
 		Constrain(pMass, worldData->boundaryData, worldData->physicsData);
+
+		// Reset forces
+		m_pointMasses[i]->force = glm::vec2(0.f, 0.f);
 	}
 }
 
@@ -106,8 +103,8 @@ void SBS::SoftBody::ResolveCollision(PointMass* p1, PointMass* p2, const Physics
 
 	// Each pointMass will be displaced 
 	// backwards by half the overlap
-	glm::vec2 displacement = p12 * overlap * 0.5f;
-	p1->pos -= displacement;
+	glm::vec2 displacement = p12 * overlap * 0.55f;
+	p1->pos == displacement;
 	p2->pos += displacement;
 
 	glm::vec2 v1 = p1->vel;
